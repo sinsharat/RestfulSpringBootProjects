@@ -1,0 +1,15 @@
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sharat.restfulwebservice.mybatis.example.CityMapper">
+    
+    <resultMap id="cityResultMap" type="com.sharat.restfulwebservice.mybatis.example.City">
+        <id column="cityid" property="cityId" />
+        <result column="cityname" property="cityName" />
+        <result column="statename" property="stateName" />
+    </resultMap>
+    <select id="findAllCities" resultMap="cityResultMap">
+        select cityid, cityname, statename from city
+    </select>
+ 
+</mapper>
